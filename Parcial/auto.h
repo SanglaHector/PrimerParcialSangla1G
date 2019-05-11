@@ -87,4 +87,29 @@ void modificarE(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[
 void menuModificar(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol,int indice);
 /**
 **/
+int buscarLleno(eAuto vec[],  int tam);
+//********************************
+/**
+**/
+void listarAutos(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol);
+//********************************
+/**
+**/
+void listarMarcas(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol);
+//**************
+/**
+**/
+void listarColores(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol);
+/**
+**/
+void listarServicios(eServicio vecSer[], int tamSer);
+//*******************
+/**
+**/
+int generarIdTrabajos();
+//*************
+/**
+**/
+int buscarLibreTra(eTrabajo vec[], int tam);
+//***************
 

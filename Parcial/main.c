@@ -4,10 +4,10 @@
 #include <conio.h>
 #include <ctype.h>
 #define TAM 1000
-#define TAMMAR 100
+#define TAMMAR 5
 #define TAMTRA 100
-#define TAMCOL 100
-#define TAMSER 100
+#define TAMCOL 5
+#define TAMSER 4
 #define OCUPADO 1
 #define VACIO 0
 
@@ -43,6 +43,7 @@ typedef struct{
     char patente;
     int idServicio;
     eFecha fecha;
+    int estado;
 }eTrabajo;
 
 typedef struct{
@@ -54,6 +55,7 @@ typedef struct{
 int main()
 {
     eAuto autos[TAM];
+    eTrabajo trabajos[TAM];
     inicializarE(autos,TAM);
         //***********************************
     eMarca marcas[] ={
@@ -108,16 +110,36 @@ do
             }
             break;
         case 4:
-
+             vacio = buscarLleno(autos,TAM);
+            if( vacio == OCUPADO){
+                listarAutos(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
+            }else {
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            }
             break;
         case 5:
-
+            vacio = buscarLleno(autos,TAM);
+            if( vacio == OCUPADO){
+                listarMarcas(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
+            }else {
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            }
             break;
         case 6:
-
+            vacio = buscarLleno(autos,TAM);
+            if( vacio == OCUPADO){
+                listarColores(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
+            }else {
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            }
             break;
         case 7:
-
+             vacio = buscarLleno(autos,TAM);
+            if( vacio == OCUPADO){
+                listarServicios(servicios,TAMSER);
+            }else {
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            }
             break;
         case 8:
 

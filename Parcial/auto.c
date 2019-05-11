@@ -178,10 +178,7 @@ int buscarE(eAuto vec[], int tam , int clave){
 void modificarE(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol){
     int id;
     int indice;
-    int opcion;
-    int sector;
     char patente[6];
-    float sueldo;
     char seguir = 'n';
     printf("\nIngrese la patente del auto que quiera modificar: ");
     scanf("%s", patente);
@@ -271,3 +268,126 @@ do{
 }while(opcion != 3);
 }
 //********************************************************************
+int buscarLleno(eAuto vec[],  int tam){
+
+int estado = -1;
+for(int i = 0;i <tam ; i++){
+
+    if (vec[i].estado == OCUPADO){
+        estado = OCUPADO;
+        break;
+    }
+}
+return estado;
+}
+//**********************************************************************
+void listarAutos(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol){
+
+eAuto aux;
+for(int i = 0; i < tam-1; i++){
+    for(int j = 0; j < tam ; j++){
+
+        if(vec[i].idMarca > vec[j].idMarca ){
+            aux = vec[i];
+            vec[i] = vec[j];
+            vec[j] = aux;
+
+        }
+    }
+}
+for(int i = 0; i < tam-1; i++){
+    for(int j = 0; j < tam ; j++){
+        if(vec[i].idMarca == vec[j].idMarca){
+
+            if(strcmp(vec[i].patente,vec[j].patente) < 0 ){
+                aux = vec[i];
+                vec[i] = vec[j];
+                vec[j] = aux;
+        }
+        }
+    }
+}
+for(int i = 0; i < tam ;i ++){
+        if(vec[i].estado == OCUPADO){
+
+            mostrarE(vec[i],vecMar,tamMar,vecCol,tamCol);
+        }
+}
+
+}
+//**********************************************************************************
+void listarMarcas(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol){
+
+    for(int i = 0; i < tamMar; i++){
+
+        printf("\n%s\n",vecMar[i].descripcion);
+    }
+
+}
+//*************************************************************************************
+void listarColores(eAuto vec[], int tam, eMarca vecMar[], int tamMar,eColor vecCol[],  int tamCol){
+
+        for(int i = 0; i < tamCol; i++){
+
+        printf("\n%s\n",vecCol[i].descripcion);
+    }
+}
+//*******************
+void listarServicios( eServicio vecSer[], int tamSer){
+
+        for(int i = 0; i < tamSer; i++){
+
+        printf("\n %s\n", vecSer[i].descripcion);
+    }
+}
+//**********************************
+void altaTrabajo(eAuto vec[], int tam,eServicio vecSer[], int tamSer,eTrabajo vecTra[], int tamTra){
+    int id;
+    char aux[6];
+    int validar;
+    int indice = buscarLibreTra(vecTra,tamTra);
+    vecTra[indice] = indice;
+
+    printf("\nIngrese la patente del auto: ");
+    scanf("%s", aux);
+
+    strcpy(vec[indice].patente,aux);
+
+    validar = -1;
+    while(validar == -1){
+            printf("\nIngrese un codigo de servicio");
+            printf("\n20000.Negro");
+            printf("\n5001.Blanco");
+            printf("\n5002.Gris");
+            printf("\n5003.Rojo :");
+            printf("\n5004.Azuñ\n :");
+            scanf("%s", aux);
+            validar = validarInt(5000,5004,aux);
+            if(validar == -1){
+                printf("\nPor favor ingrese una opcion correcta.");
+            }
+    }
+    vec[indice].idColor = atoi(aux);
+    strcpy(aux," ");
+
+
+}
+//*****************************************
+int generarIdTrabajos()
+{
+    static int id= 1;
+
+    return id++;
+}
+//*****************************************
+int buscarLibreTra(eTrabajo vec[], int tam){
+    int indice = -1;
+    for(int i = 0; i < tam ;  i++){
+
+        if(vec[i].estado == VACIO){
+            indice = i;
+            break;
+        }
+    }
+    return indice;
+}
