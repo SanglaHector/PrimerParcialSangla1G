@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1557533625 source:c:\users\alumno\desktop\parcial\parcial\auto.c
+	"auto.h"
+
+1557533793 source:c:\users\alumno\desktop\parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1557531289 c:\users\alumno\desktop\parcial\parcial\auto.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1557532419 source:c:\users\alumno\desktop\parcial\parcial\validaciones.c
+	"validaciones.h"
+
+1557532420 c:\users\alumno\desktop\parcial\parcial\validaciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
