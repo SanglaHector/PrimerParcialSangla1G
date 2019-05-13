@@ -527,7 +527,7 @@ void altaTrabajo(eAuto vec[], int tam,eServicio vecSer[], int tamSer,eTrabajo ve
      }
      vecTra[indice].fecha.dia = atoi(aux);
      strcpy(aux," ");
-    vecTra[indice].estado == OCUPADO;
+     vecTra[indice].estado == OCUPADO;
      printf("\nServicio ingresado con exito!: ");
      mostrarTrabajo(vecTra[indice],vecSer,tamSer);
 }
@@ -617,3 +617,5 @@ void hardCodearTrabajos(eTrabajo vec[], int tam){
         vec[i] = ficticios[i];
     }
 }
+
+

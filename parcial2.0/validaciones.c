@@ -115,3 +115,4 @@ int isChar(char aux[]){
     return validar;
 }
 
+

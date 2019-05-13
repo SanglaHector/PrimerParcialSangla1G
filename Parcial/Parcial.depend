@@ -26,3 +26,32 @@
 	<conio.h>
 	<ctype.h>
 
+1557689247 source:c:\users\user\desktop\parcial\parcial\validaciones.c
+	"validaciones.h"
+
+1557687124 c:\users\user\desktop\parcial\parcial\validaciones.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1557714555 source:c:\users\user\desktop\parcial\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1557714616 source:c:\users\user\desktop\parcial\parcial\auto.c
+	"auto.h"
+
+1557692151 c:\users\user\desktop\parcial\parcial\auto.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1557710017 source:c:\users\user\desktop\parcial\parcial\trabajo.c
+

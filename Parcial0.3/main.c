@@ -3,12 +3,13 @@
 #include <string.h>
 #include <conio.h>
 #include <ctype.h>
-#include "Trabajo.h"
-#include "auto.h"
+#include "fecha.h"
+#include "Marca.h"
 #include "Colores.h"
+#include "Trabajo.h"
 #include "Servicios.h"
 #include "validaciones.h"
-#include "Marca.h"
+#include "auto.h"
 #define TAM 1000
 #define TAMMAR 5
 #define TAMTRA 1000

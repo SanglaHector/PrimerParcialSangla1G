@@ -5,7 +5,7 @@
 #include <ctype.h>
 #define TAM 1000
 #define TAMMAR 5
-#define TAMTRA 100
+#define TAMTRA 1000
 #define TAMCOL 5
 #define TAMSER 4
 #define OCUPADO 1
@@ -39,8 +39,8 @@ typedef struct{
 }eServicio;
 
 typedef struct{
-    int id;//tiket
-    char patente;
+    int id;
+    char patente [6];
     int idServicio;
     eFecha fecha;
     int estado;
@@ -54,9 +54,8 @@ typedef struct{
 
 int main()
 {
-    eAuto autos[TAM];
-    eTrabajo trabajos[TAM];
-    inicializarE(autos,TAM);
+    int opcion;
+    int vacio;
         //***********************************
     eMarca marcas[] ={
         {1000,"Renault"},{1001,"Fiat"},{1002,"Ford"},{1003,"Chevrolet"},{1004,"Peugeot"}
@@ -69,8 +68,12 @@ int main()
     eServicio servicios[] = {{20000,"Lavado",250},{20001,"Pulido",300},{20002,"Encerado",400},{20003,"Completo",600}
     };
         //**********************************
-    int opcion;
-    int vacio;
+    eAuto autos[TAM];
+    eTrabajo trabajos[TAMTRA];
+    inicializarE(autos,TAM);
+    inicializarTrabajos(trabajos,TAMTRA);
+    //hardCodearAutos(autos,7);
+    //hardCodearTrabajos(trabajos,7);
 do
     {
 
@@ -98,7 +101,7 @@ do
             if( vacio == OCUPADO){
                 modificarE(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
             }else {
-            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
             }
             break;
         case 3:
@@ -106,7 +109,7 @@ do
             if( vacio == OCUPADO){
                 bajaE(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
             }else {
-            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
             }
             break;
         case 4:
@@ -114,7 +117,7 @@ do
             if( vacio == OCUPADO){
                 listarAutos(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
             }else {
-            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
             }
             break;
         case 5:
@@ -122,7 +125,7 @@ do
             if( vacio == OCUPADO){
                 listarMarcas(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
             }else {
-            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
             }
             break;
         case 6:
@@ -130,7 +133,7 @@ do
             if( vacio == OCUPADO){
                 listarColores(autos,TAM,marcas,TAMMAR,colores,TAMCOL);
             }else {
-            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
             }
             break;
         case 7:
@@ -138,14 +141,24 @@ do
             if( vacio == OCUPADO){
                 listarServicios(servicios,TAMSER);
             }else {
-            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.");
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
             }
             break;
         case 8:
-
+            vacio = buscarLleno(autos,TAM);
+            if( vacio == OCUPADO){
+                altaTrabajo(autos,TAM,servicios,TAMSER,trabajos,TAMTRA);
+            }else {
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
+            }
             break;
         case 9:
-
+            vacio = buscarLleno(autos,TAM);
+            if( vacio == OCUPADO){
+                mostrarTrabajos(trabajos,TAMTRA,servicios,TAMSER);
+            }else {
+            printf("\nDebe ingresar un usuario antes de ingresar a esta opcion.\n");
+            }
             break;
         case 10:
             printf("Hasta luego!\n");

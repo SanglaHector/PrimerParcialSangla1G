@@ -3,14 +3,16 @@
 #include <string.h>
 #include <conio.h>
 #include <ctype.h>
+#include "fecha.h"
+#include "Trabajo.h"
+#include "Colores.h"
+#include "Servicios.h"
+#include "validaciones.h"
+#include "Marca.h"
 #define TAM 7
 #define OCUPADO 1
 #define VACIO 0
-typedef struct{
-    int dia;
-    int mes;
-    int anio;
-}eFecha;
+
 
 typedef struct{
 
@@ -22,29 +24,7 @@ typedef struct{
     int estado; //año de fabricacion
 }eAuto;
 
-typedef struct{
-    int id;
-    char descripcion[20];
-}eMarca;
 
-typedef struct{
-    int id;
-    char descripcion[20];
-    float precio;
-}eServicio;
-
-typedef struct{
-    int id;//tiket
-    char patente[6];
-    int idServicio;
-    eFecha fecha;
-    int estado;
-}eTrabajo;
-
-typedef struct{
-    int id;
-    char descripcion[20];
-}eColor;
 
 //***************************************************************
 /**
@@ -128,3 +108,5 @@ void mostrarTrabajo(eTrabajo vecTra, eServicio vecSer[], int tamSer);
 /**
 **/
 void inicializarTrabajos(eTrabajo vecTra[],int tamTra);
+
+
