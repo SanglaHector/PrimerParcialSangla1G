@@ -3,12 +3,6 @@
 #include <string.h>
 #include <conio.h>
 #include <ctype.h>
-#include "fecha.h"
-#include "Marca.h"
-#include "Colores.h"
-#include "Trabajo.h"
-#include "Servicios.h"
-#include "validaciones.h"
 #include "auto.h"
 #define TAM 1000
 #define TAMMAR 5
@@ -38,8 +32,8 @@ int main()
     eTrabajo trabajos[TAMTRA];
     inicializarE(autos,TAM);
     inicializarTrabajos(trabajos,TAMTRA);
-    //hardCodearAutos(autos,7);
-    //hardCodearTrabajos(trabajos,7);
+    hardCodearAutos(autos,7);
+    hardCodearTrabajos(trabajos,7);
 do
     {
 

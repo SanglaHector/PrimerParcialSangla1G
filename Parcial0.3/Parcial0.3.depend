@@ -2,54 +2,38 @@
 1557720300 source:c:\users\user\desktop\parcial\parcial0.3\colores.c
 	"Colores.h"
 
-1557721045 c:\users\user\desktop\parcial\parcial0.3\colores.h
+1557722709 c:\users\user\desktop\parcial\parcial0.3\colores.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	<ctype.h>
-	"auto.h"
-	"fecha.h"
-	"Servicios.h"
-	"validaciones.h"
-	"Marca.h"
 
-1557721470 c:\users\user\desktop\parcial\parcial0.3\auto.h
+1557722639 c:\users\user\desktop\parcial\parcial0.3\auto.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	<ctype.h>
-	"fecha.h"
 	"Trabajo.h"
 	"Colores.h"
 	"Servicios.h"
 	"validaciones.h"
 	"Marca.h"
 
-1557721083 c:\users\user\desktop\parcial\parcial0.3\trabajo.h
+1557722709 c:\users\user\desktop\parcial\parcial0.3\trabajo.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	<ctype.h>
-	"fecha.h"
-	"Colores.h"
-	"Servicios.h"
-	"validaciones.h"
-	"Marca.h"
 
-1557721046 c:\users\user\desktop\parcial\parcial0.3\servicios.h
+1557722709 c:\users\user\desktop\parcial\parcial0.3\servicios.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	<ctype.h>
-	"auto.h"
-	"fecha.h"
-	"Colores.h"
-	"validaciones.h"
-	"Marca.h"
 
 1557720238 c:\users\user\desktop\parcial\parcial0.3\validaciones.h
 	<stdio.h>
@@ -58,30 +42,38 @@
 	<conio.h>
 	<ctype.h>
 
-1557721045 c:\users\user\desktop\parcial\parcial0.3\marca.h
+1557722708 c:\users\user\desktop\parcial\parcial0.3\marca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1557722428 c:\users\user\desktop\parcial\parcial0.3\fecha.h
+
+1557722152 source:c:\users\user\desktop\parcial\parcial0.3\fecha.c
+	"fecha.h"
+
+1557721484 source:c:\users\user\desktop\parcial\parcial0.3\auto.c
+	"auto.h"
+
+1557720316 source:c:\users\user\desktop\parcial\parcial0.3\marca.c
+	"Marca.h"
+
+1557720329 source:c:\users\user\desktop\parcial\parcial0.3\servicios.c
+	"Servicios.h"
+
+1557722741 source:c:\users\user\desktop\parcial\parcial0.3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	<ctype.h>
 	"auto.h"
-	"Colores.h"
-	"fecha.h"
-	"Servicios.h"
-	"validaciones.h"
-	"Marca.h"
 
-1557721264 c:\users\user\desktop\parcial\parcial0.3\fecha.h
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<conio.h>
-	<ctype.h>
-	"Colores.h"
-	"Servicios.h"
-	"validaciones.h"
-	"Marca.h"
+1557720341 source:c:\users\user\desktop\parcial\parcial0.3\trabajo.c
+	"Trabajo.h"
 
-1557720988 source:c:\users\user\desktop\parcial\parcial0.3\fecha.c
-	"fecha.h"
+1557720359 source:c:\users\user\desktop\parcial\parcial0.3\validaciones.c
+	"validaciones.h"
 

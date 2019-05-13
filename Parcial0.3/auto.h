@@ -3,13 +3,11 @@
 #include <string.h>
 #include <conio.h>
 #include <ctype.h>
-#include "fecha.h"
 #include "Trabajo.h"
 #include "Colores.h"
 #include "Servicios.h"
 #include "validaciones.h"
 #include "Marca.h"
-#define TAM 7
 #define OCUPADO 1
 #define VACIO 0
 
